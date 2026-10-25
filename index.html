@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>PBRS Documents</title>
+<style>
+:root{--blue:#005699;--deep:#00335c;--sky:#1f93d7;--orange:#fc981e;--ink:#041b33;--tint:#eaf1f8;--line:rgba(0,86,153,.28)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+header{border-bottom:1px solid var(--line)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.top img{height:44px;width:auto;display:block}
+.top span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--blue)}
+.hero{padding:44px 0 28px}
+.hero h1{font-family:Georgia,'Playfair Display',serif;font-weight:500;font-size:38px;line-height:1.15;color:var(--deep)}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--blue)}
+.hero p{margin-top:12px;max-width:640px;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:12px 0 40px}
+.card{background:var(--tint);border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:14px;padding:18px;display:flex;flex-direction:column}
+.thumb{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;height:300px;display:flex;align-items:center;justify-content:center}
+.thumb img{max-width:100%;max-height:100%;display:block}
+.card h2{font-family:Georgia,'Playfair Display',serif;font-weight:500;font-size:22px;color:var(--deep);margin-top:16px}
+.meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--blue);margin-top:4px}
+.card p{font-size:15px;margin-top:8px;flex:1}
+.btns{display:grid;gap:10px;margin-top:16px}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:600;font-size:15px;padding:12px 14px;border-radius:10px;border:1.5px solid var(--blue)}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.primary:hover{background:var(--deep)}
+.btn.ghost{background:#fff;color:var(--blue)}
+.btn.ghost:hover{background:var(--tint)}
+.btn small{display:block;font-weight:400;font-size:12px;opacity:.85;margin-top:2px}
+.note{border:1px solid var(--line);background:var(--tint);border-radius:12px;padding:16px 18px;font-size:14px;margin-bottom:40px}
+.note b{color:var(--deep)}
+footer{border-top:1px solid var(--line);padding:18px 0;font-size:13px;color:var(--deep)}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.hero h1{font-size:30px}.thumb{height:260px}}
+</style>
+</head>
+<body>
+<header><div class="wrap top"><img src="img/logo.png" alt="PBRS"><span>Documents for review</span></div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1>PBRS print <em>documents.</em></h1>
+    <p>Three documents, each in two forms: a clean PDF to read or share, and a print-ready PDF with crop marks and bleed for the printer.</p>
+  </section>
+  <section class="grid">
+    <article class="card">
+      <div class="thumb"><img src="img/single.jpg" alt="Single-page leaflet cover"></div>
+      <h2>Single-page leaflet</h2>
+      <div class="meta">A5 &middot; front and back</div>
+      <p>Awards, championship results and the five qualifications, with how to apply and contact details.</p>
+      <div class="btns">
+        <a class="btn primary" href="files/single-page-leaflet.pdf" download>Download PDF</a>
+        <a class="btn ghost" href="files/single-page-leaflet-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks and bleed</small></a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb"><img src="img/3fold.jpg" alt="3-fold leaflet outside"></div>
+      <h2>3-fold leaflet</h2>
+      <div class="meta">A4 landscape &middot; outside and inside</div>
+      <p>Our story, awards and recognition, championship results, courses and how to apply.</p>
+      <div class="btns">
+        <a class="btn primary" href="files/3-fold-leaflet.pdf" download>Download PDF</a>
+        <a class="btn ghost" href="files/3-fold-leaflet-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks, bleed and fold</small></a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb"><img src="img/brochure.jpg" alt="PBRS brochure cover"></div>
+      <h2>PBRS brochure</h2>
+      <div class="meta">A4 portrait &middot; 20 pages</div>
+      <p>The full brochure: our story, vision and values, messages, awards, courses, student voices, employment support, fees and contact.</p>
+      <div class="btns">
+        <a class="btn primary" href="files/pbrs-brochure-final.pdf" download>Download PDF</a>
+        <a class="btn ghost" href="files/pbrs-brochure-final-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks and bleed</small></a>
+      </div>
+    </article>
+  </section>
+  <div class="note"><b>Which file do I use?</b> Download PDF is for reading, email and review. The print file is larger and carries 3 mm bleed with crop marks, so give that one to the printer. Fees as advised by PBRS; please confirm with admissions before enrolling.</div>
+</main>
+<footer><div class="wrap">Professional Business and Restaurant School &middot; 150 Hobson Street, Auckland, New Zealand &middot; marketing@pbrs.ac.nz &middot; +64 (09) 367 1010</div></footer>
+</body>
+</html>
