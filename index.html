@@ -6,79 +6,110 @@
 <meta name="robots" content="noindex,nofollow">
 <title>PBRS Documents</title>
 <style>
-:root{--blue:#005699;--deep:#00335c;--sky:#1f93d7;--orange:#fc981e;--ink:#041b33;--tint:#eaf1f8;--line:rgba(0,86,153,.28)}
+:root{--blue:#005699;--deep:#00335c;--orange:#fc981e;--ink:#041b33;--tint:#eaf1f8;--line:rgba(0,86,153,.28)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
-header{border-bottom:1px solid var(--line)}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
 .top img{height:44px;width:auto;display:block}
-.top span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--blue)}
-.hero{padding:44px 0 28px}
-.hero h1{font-family:Georgia,'Playfair Display',serif;font-weight:500;font-size:38px;line-height:1.15;color:var(--deep)}
-.hero h1 em{font-style:italic;font-weight:400;color:var(--blue)}
-.hero p{margin-top:12px;max-width:640px;font-size:17px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:12px 0 40px}
-.card{background:var(--tint);border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:14px;padding:18px;display:flex;flex-direction:column}
-.thumb{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;height:300px;display:flex;align-items:center;justify-content:center}
-.thumb img{max-width:100%;max-height:100%;display:block}
-.card h2{font-family:Georgia,'Playfair Display',serif;font-weight:500;font-size:22px;color:var(--deep);margin-top:16px}
-.meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--blue);margin-top:4px}
-.card p{font-size:15px;margin-top:8px;flex:1}
-.btns{display:grid;gap:10px;margin-top:16px}
-.btn{display:block;text-align:center;text-decoration:none;font-weight:600;font-size:15px;padding:12px 14px;border-radius:10px;border:1.5px solid var(--blue)}
-.btn.primary{background:var(--blue);color:#fff}
-.btn.primary:hover{background:var(--deep)}
-.btn.ghost{background:#fff;color:var(--blue)}
-.btn.ghost:hover{background:var(--tint)}
-.btn small{display:block;font-weight:400;font-size:12px;opacity:.85;margin-top:2px}
-.note{border:1px solid var(--line);background:var(--tint);border-radius:12px;padding:16px 18px;font-size:14px;margin-bottom:40px}
-.note b{color:var(--deep)}
-footer{border-top:1px solid var(--line);padding:18px 0;font-size:13px;color:var(--deep)}
-@media(max-width:900px){.grid{grid-template-columns:1fr}.hero h1{font-size:30px}.thumb{height:260px}}
+nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+nav a{text-decoration:none;font-size:14px;font-weight:600;color:var(--blue);padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
+nav a:hover{background:var(--tint)}
+.hero{padding:40px 0 8px}
+.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:38px;line-height:1.15;color:var(--deep)}
+.hero h1 em{color:var(--blue)}
+.hero p{margin-top:10px;max-width:660px;font-size:17px}
+.doc{padding:44px 0;border-top:1px solid var(--line);margin-top:36px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.num{font-family:Georgia,serif;font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--blue)}
+.doc h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:32px;color:var(--deep);line-height:1.15;margin-top:2px}
+.spec{font-size:14px;color:#44586d;margin-top:4px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;font-weight:700;font-size:15px;padding:11px 22px;border-radius:12px;border:1.5px solid var(--blue);min-width:200px;text-align:center}
+.btn small{font-weight:500;font-size:12px;opacity:.85}
+.btn.p{background:var(--blue);color:#fff}.btn.p:hover{background:var(--deep)}
+.btn.g{background:#fff;color:var(--blue)}.btn.g:hover{background:var(--tint)}
+.pages{display:grid;gap:18px;margin-top:26px}
+.pages.a4{grid-template-columns:repeat(4,1fr)}
+.pages.two{grid-template-columns:repeat(2,minmax(0,360px));justify-content:start}
+.pages.fold{grid-template-columns:1fr 1fr}
+.pg{background:var(--tint);border:1px solid var(--line);border-radius:12px;padding:10px;cursor:zoom-in;text-align:left;font:inherit;color:inherit}
+.pg:hover{border-color:var(--blue)}
+.pg img{width:100%;height:auto;display:block;border-radius:6px;background:#fff}
+.pg span{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--blue);padding:8px 2px 0}
+.note{margin:36px 0 40px;border:1px solid var(--line);background:var(--tint);border-radius:12px;padding:16px 18px;font-size:14px;border-left:4px solid var(--orange)}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--deep)}
+/* viewer */
+dialog{border:0;background:rgba(2,16,31,.92);color:#fff;width:100vw;height:100vh;max-width:none;max-height:none;padding:0}
+dialog::backdrop{background:rgba(2,16,31,.92)}
+.vw{display:flex;flex-direction:column;height:100%;align-items:center;padding:14px}
+.vb{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:1200px;font-size:14px;gap:10px}
+.vb button{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:10px;padding:8px 14px;font-size:16px;cursor:pointer}
+.vb button:hover{background:rgba(255,255,255,.25)}
+.vimg{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;width:100%}
+.vimg img{max-width:100%;max-height:100%;object-fit:contain;background:#fff;border-radius:6px}
+@media(max-width:900px){.pages.a4{grid-template-columns:repeat(2,1fr)}.pages.fold{grid-template-columns:1fr}.pages.two{grid-template-columns:1fr 1fr}.hero h1{font-size:30px}.doc h2{font-size:26px}nav{display:none}.btn{min-width:0;flex:1}}
 </style>
 </head>
 <body>
-<header><div class="wrap top"><img src="img/logo.png" alt="PBRS"><span>Documents for review</span></div></header>
+<header><div class="wrap top"><img src="img/logo.png" alt="PBRS"><nav aria-label="Documents"><a href="#single">Single-page leaflet</a><a href="#fold">3-fold leaflet</a><a href="#brochure">Brochure</a></nav></div></header>
 <main class="wrap">
-  <section class="hero">
-    <h1>PBRS print <em>documents.</em></h1>
-    <p>Three documents, each in two forms: a clean PDF to read or share, and a print-ready PDF with crop marks and bleed for the printer.</p>
+  <section class="hero"><h1>PBRS <em>documents.</em></h1>
+    <p>Every page of each document is open below. Click a page to enlarge it. For each one, download the PDF or open the print file with crop marks and bleed.</p></section>
+
+  <section class="doc" id="single">
+    <div class="head"><div><div class="num">01</div><h2>Single-page leaflet</h2><div class="spec">A5 &middot; front and back</div></div>
+      <div class="btns"><a class="btn p" href="files/single-page-leaflet.pdf" download>Download PDF</a><a class="btn g" href="files/single-page-leaflet-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks and bleed</small></a></div></div>
+    <div class="pages two" data-set="single"></div>
   </section>
-  <section class="grid">
-    <article class="card">
-      <div class="thumb"><img src="img/single.jpg" alt="Single-page leaflet cover"></div>
-      <h2>Single-page leaflet</h2>
-      <div class="meta">A5 &middot; front and back</div>
-      <p>Awards, championship results and the five qualifications, with how to apply and contact details.</p>
-      <div class="btns">
-        <a class="btn primary" href="files/single-page-leaflet.pdf" download>Download PDF</a>
-        <a class="btn ghost" href="files/single-page-leaflet-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks and bleed</small></a>
-      </div>
-    </article>
-    <article class="card">
-      <div class="thumb"><img src="img/3fold.jpg" alt="3-fold leaflet outside"></div>
-      <h2>3-fold leaflet</h2>
-      <div class="meta">A4 landscape &middot; outside and inside</div>
-      <p>Our story, awards and recognition, championship results, courses and how to apply.</p>
-      <div class="btns">
-        <a class="btn primary" href="files/3-fold-leaflet.pdf" download>Download PDF</a>
-        <a class="btn ghost" href="files/3-fold-leaflet-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks, bleed and fold</small></a>
-      </div>
-    </article>
-    <article class="card">
-      <div class="thumb"><img src="img/brochure.jpg" alt="PBRS brochure cover"></div>
-      <h2>PBRS brochure</h2>
-      <div class="meta">A4 portrait &middot; 20 pages</div>
-      <p>The full brochure: our story, vision and values, messages, awards, courses, student voices, employment support, fees and contact.</p>
-      <div class="btns">
-        <a class="btn primary" href="files/pbrs-brochure-final.pdf" download>Download PDF</a>
-        <a class="btn ghost" href="files/pbrs-brochure-final-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks and bleed</small></a>
-      </div>
-    </article>
+
+  <section class="doc" id="fold">
+    <div class="head"><div><div class="num">02</div><h2>3-fold leaflet</h2><div class="spec">A4 landscape &middot; outside and inside</div></div>
+      <div class="btns"><a class="btn p" href="files/3-fold-leaflet.pdf" download>Download PDF</a><a class="btn g" href="files/3-fold-leaflet-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks, bleed and fold</small></a></div></div>
+    <div class="pages fold" data-set="fold"></div>
   </section>
-  <div class="note"><b>Which file do I use?</b> Download PDF is for reading, email and review. The print file is larger and carries 3 mm bleed with crop marks, so give that one to the printer. Fees as advised by PBRS; please confirm with admissions before enrolling.</div>
+
+  <section class="doc" id="brochure">
+    <div class="head"><div><div class="num">03</div><h2>PBRS brochure</h2><div class="spec">A4 portrait &middot; 20 pages</div></div>
+      <div class="btns"><a class="btn p" href="files/pbrs-brochure-final.pdf" download>Download PDF</a><a class="btn g" href="files/pbrs-brochure-final-print-cropmarks.pdf" target="_blank" rel="noopener">Print file<small>with crop marks and bleed</small></a></div></div>
+    <div class="pages a4" data-set="brochure"></div>
+  </section>
+
+  <div class="note"><b>Which file do I use?</b> Download PDF is for reading and sending by email. Give the printer the Print file: it carries 3 mm bleed and crop marks. Fees as advised by PBRS; please confirm with admissions before enrolling.</div>
 </main>
-<footer><div class="wrap">Professional Business and Restaurant School &middot; 150 Hobson Street, Auckland, New Zealand &middot; marketing@pbrs.ac.nz &middot; +64 (09) 367 1010</div></footer>
+<footer><div class="wrap">Professional Business and Restaurant School &middot; 150 Hobson Street, Auckland, New Zealand &middot; marketing@pbrs.ac.nz &middot; +64 (09) 367 1010 &middot; www.pbrs.ac.nz</div></footer>
+
+<dialog id="vw" aria-label="Page viewer"><div class="vw">
+  <div class="vb"><span id="cap"></span><span><button id="pv" aria-label="Previous page">&larr;</button> <button id="nx" aria-label="Next page">&rarr;</button> <button id="cl" aria-label="Close">Close</button></span></div>
+  <div class="vimg"><img id="big" alt=""></div></div></dialog>
+
+<script>
+(function(){
+  var S={
+    single:[['img/leaflets/single-front.jpg','Front'],['img/leaflets/single-back.jpg','Back']],
+    fold:[['img/leaflets/3fold-outside.jpg','Outside'],['img/leaflets/3fold-inside.jpg','Inside']],
+    brochure:[]
+  };
+  for(var i=1;i<=20;i++){var n=('0'+i).slice(-2);S.brochure.push(['img/pages/p'+n+'.jpg','Page '+i])}
+  var cur={set:'',i:0},dlg=document.getElementById('vw'),big=document.getElementById('big'),cap=document.getElementById('cap');
+  document.querySelectorAll('.pages').forEach(function(box){
+    var set=box.getAttribute('data-set');
+    S[set].forEach(function(p,idx){
+      var b=document.createElement('button');b.type='button';b.className='pg';b.setAttribute('aria-label','Enlarge '+p[1]);
+      b.innerHTML='<img loading="lazy" src="'+p[0]+'" alt="'+p[1]+'"><span>'+p[1]+'</span>';
+      b.onclick=function(){show(set,idx);if(!dlg.open)dlg.showModal()};
+      box.appendChild(b);
+    });
+  });
+  function show(set,i){var L=S[set];cur.set=set;cur.i=(i+L.length)%L.length;big.src=L[cur.i][0];big.alt=L[cur.i][1];cap.textContent=L[cur.i][1]+' ('+(cur.i+1)+' of '+L.length+')'}
+  document.getElementById('pv').onclick=function(){show(cur.set,cur.i-1)};
+  document.getElementById('nx').onclick=function(){show(cur.set,cur.i+1)};
+  document.getElementById('cl').onclick=function(){dlg.close()};
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+  document.addEventListener('keydown',function(e){if(!dlg.open)return;if(e.key==='ArrowLeft')show(cur.set,cur.i-1);if(e.key==='ArrowRight')show(cur.set,cur.i+1)});
+})();
+</script>
 </body>
 </html>
